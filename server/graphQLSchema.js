@@ -24,7 +24,7 @@ exports.typeDefs = gql`
     ): Project
 
     addProject(name: String!, projectName: String!, phone: Int!): Project
-    deleteProject(id: ID!): String
+    deleteProject(id: String): Project
   }
 `;
 
