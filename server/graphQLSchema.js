@@ -29,13 +29,10 @@ exports.typeDefs = gql`
 `;
 
 const connect = async () => {
-  await mongoose.connect(
-    "mongodb+srv://pratham:project@cluster0.82orxk4.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: "true",
-      useUnifiedTopology: "true",
-    }
-  );
+  await mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: "true",
+    useUnifiedTopology: "true",
+  });
 };
 
 exports.resolvers = {
