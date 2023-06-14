@@ -35,7 +35,7 @@ const ProjectsList = () => {
     deleteProject({ variables: { id } });
   };
   const { loading, error, data } = useQuery(Get_Posts);
-
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
